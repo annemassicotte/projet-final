@@ -1,0 +1,27 @@
+.layout-page {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: 4rem;
+}
+
+app-entete {
+  display: block;
+}
+
+app-menu-aside {
+  margin-top: 4rem;
+  background-color: rgb(236, 236, 236);
+  padding: 2rem;
+}
+app-liste-petits-videos {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 4rem;
+}
+
+app-video-complet {
+  margin-top: 4rem;
+  background-color: rgb(236, 236, 236);
+  padding-inline: 2rem;
+}

@@ -1,0 +1,31 @@
+h1{
+  margin-bottom: 0;
+}
+
+.layout-entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.layout-entete a {
+  flex-basis: calc(30% - 2rem);
+}
+
+.layout-entete .recherche {
+  flex-basis: calc(40% - 2rem);
+}
+
+.layout-entete .user {
+  flex-basis: calc(30% - 2rem);
+}
+
+img {
+  width: 250px;
+}
+
+.recherche {
+  border: 1px solid black;
+  padding: 1rem;
+}

@@ -1,0 +1,64 @@
+<div class="wrapper-sections-video-complet">
+  <div class="wrapper-video-infos">
+    <img [src]="videoComplet.image" [alt]="videoComplet.nom" />
+    <div class="wrapper-infos-sous-video">
+      <h2>{{ videoComplet.nom }}</h2>
+      <p>{{ videoComplet.duree }} secondes</p>
+      <div *ngIf="videoComplet.sousTitres == 'ss'">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Subtitles"
+          fontIcon="subtitles"
+        ></mat-icon>
+      </div>
+      <div *ngIf="videoComplet.sousTitres == 'cc'">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Closed caption"
+          fontIcon="closed_caption"
+        ></mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="titre-info">À propos de la vidéo</h3>
+
+    <div class="wrapper-items-description">
+      <div class="wrapper-item-description">
+        <p>Publiée le {{ videoComplet.datePublication }}</p>
+        <p>{{ videoComplet.nombreVues }} visionnements</p>
+        <p>Score: {{ videoComplet.score }}</p>
+      </div>
+
+      <div class="wrapper-item-description">
+        <h4>Description</h4>
+        <p>{{ videoComplet.description }}</p>
+        <p>Code: {{ videoComplet.code }}</p>
+      </div>
+
+      <div class="wrapper-item-description">
+        <h4>Catégories</h4>
+        <p>{{ videoComplet.categories }}</p>
+      </div>
+
+      <div class="wrapper-item-description">
+        <h4>Auteur</h4>
+        <app-utilisateur [utilisateur]="videoComplet.auteur"></app-utilisateur>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="titre-info">Avis</h3>
+
+    <div class="wrapper-commentaires">
+      <div *ngFor="let avisItem of videoComplet.avis">
+        <div class="wrapper-commentaire">
+          <p>{{ avisItem.commentaire }}</p>
+          <p class="note">{{ avisItem.note }}/10</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div [ngClass]="{'user-entete': userHeaderClass}" class="wrapper-user">
+  <div class="user-verified">
+    <p>{{ utilisateur.nom }}</p>
+    <div *ngIf="utilisateur.verifie">
+      <mat-icon
+        aria-hidden="false"
+        aria-label="Utilisateur vérifié"
+        fontIcon="check_circle"
+      ></mat-icon>
+    </div>
+  </div>
+  <p class="username">@{{ utilisateur.utilisateur}}</p>
+</div>

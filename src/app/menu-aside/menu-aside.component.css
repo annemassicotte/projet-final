@@ -1,0 +1,27 @@
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.menu li a:hover {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: rgb(79, 153, 203);
+}
+
+.menu li{
+  display:flex;
+  align-items:center;
+  gap: 1rem;
+}
+
+.menu li:not(:last-child) {
+  margin-bottom: 1rem;
+}
