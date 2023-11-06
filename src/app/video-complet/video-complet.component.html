@@ -32,19 +32,31 @@
       </div>
 
       <div class="wrapper-item-description">
-        <h4>Description</h4>
+        <div>
+          <h4>Description</h4>
+          <mat-divider></mat-divider>
+        </div>
         <p>{{ videoComplet.description }}</p>
         <p>Code: {{ videoComplet.code }}</p>
       </div>
 
       <div class="wrapper-item-description">
-        <h4>Catégories</h4>
+        <div>
+          <h4>Catégories</h4>
+          <mat-divider></mat-divider>
+        </div>
         <p>{{ videoComplet.categories }}</p>
       </div>
 
       <div class="wrapper-item-description">
-        <h4>Auteur</h4>
-        <app-utilisateur [utilisateur]="videoComplet.auteur"></app-utilisateur>
+        <div>
+          <h4>Auteur</h4>
+          <mat-divider></mat-divider>
+        </div>
+        <app-utilisateur
+          [utilisateur]="videoComplet.auteur"
+          [showDescription]="true"
+        ></app-utilisateur>
       </div>
     </div>
   </div>

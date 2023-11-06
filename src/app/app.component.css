@@ -13,11 +13,17 @@ app-menu-aside {
   background-color: rgb(236, 236, 236);
   padding: 2rem;
 }
+
+app-categories {
+  display: inline-block;
+  margin-top: 4rem;
+}
+
 app-liste-petits-videos {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 app-video-complet {

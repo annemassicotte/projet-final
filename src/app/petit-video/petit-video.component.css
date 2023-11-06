@@ -16,6 +16,13 @@ img {
 
 .wrapper_vues-date {
   display: flex;
-  /* justify-content: space-between; */
   gap: 0.5rem;
+}
+
+.high_score {
+  border: 3px solid green;
+}
+
+.low_score {
+  border: 3px solid rgb(224, 20, 20);
 }

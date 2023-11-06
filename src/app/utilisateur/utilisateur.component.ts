@@ -4,14 +4,15 @@ import { Auteur } from '../auteur';
 @Component({
   selector: 'app-utilisateur',
   templateUrl: './utilisateur.component.html',
-  styleUrls: ['./utilisateur.component.css']
+  styleUrls: ['./utilisateur.component.css'],
 })
 export class UtilisateurComponent {
   @Input() utilisateur: Auteur = {
     nom: '',
     utilisateur: '',
     verifie: false,
-    description: ''
-  }
-  @Input() userHeaderClass = false; 
+    description: '',
+  };
+  @Input() userHeaderClass: boolean = false;
+  @Input() showDescription: boolean = false;
 }

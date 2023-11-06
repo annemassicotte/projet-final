@@ -1,5 +1,5 @@
 <div class="petit-video">
-  <img [src]="petitVideo.image" [alt]="petitVideo.nom" />
+  <img [src]="petitVideo.image" [alt]="petitVideo.nom" [ngClass]="{'high_score': petitVideo.score > 5000, 'low_score': petitVideo.score < 5000}" />
   <div class="wrapper-infos">
     <h3>{{ petitVideo.nom }}</h3>
     <app-utilisateur [utilisateur]="petitVideo.auteur"></app-utilisateur>
