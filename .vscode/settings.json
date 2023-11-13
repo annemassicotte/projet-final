@@ -1,0 +1,7 @@
+{
+  "editor.codeActionsOnSave": {},
+  "prettier.bracketSameLine": true,
+  "prettier.singleQuote": false,
+  "javascript.preferences.quoteStyle": "double",
+  "typescript.preferences.quoteStyle": "double"
+}

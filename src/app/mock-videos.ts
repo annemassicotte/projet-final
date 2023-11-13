@@ -6,7 +6,7 @@ export const TABLEAUVIDEOS: Video[] = [
     description:
       'Découvrez le tout dernier membre de notre famille, Zorro! Dans ce 311e vlog, je vous présente mon adorable nouveau chien et partage avec vous les moments spéciaux de notre première rencontre.',
     code: '123AAA',
-    categories: ['Vlog', 'Style de vie'],
+    categories: ['Vlog', 'Style de vie', 'Divertissement'],
     auteur: {
       nom: 'Emma Johnson',
       utilisateur: 'emma_johnson',
@@ -98,7 +98,8 @@ export const TABLEAUVIDEOS: Video[] = [
       },
       {
         note: 7,
-        commentaire: 'Ton contenu est très informatif, comme toujours! Continue ton bon travail!',
+        commentaire:
+          'Ton contenu est très informatif, comme toujours! Continue ton bon travail!',
       },
     ],
     image: 'https://picsum.photos/id/250/300/200',
@@ -124,7 +125,8 @@ export const TABLEAUVIDEOS: Video[] = [
     avis: [
       {
         note: 4,
-        commentaire: "C'est une bonne vidéo, mais la qualité du son laisse à désirer. Serait-ce un problème technique?",
+        commentaire:
+          "C'est une bonne vidéo, mais la qualité du son laisse à désirer. Serait-ce un problème technique?",
       },
       {
         note: 6,
@@ -145,7 +147,8 @@ export const TABLEAUVIDEOS: Video[] = [
       nom: "Les Vagabonds de l'Horizon",
       utilisateur: 'lesvagabondsdelhorizon',
       verifie: true,
-      description: 'Groupe musical folk explorant de nouveaux horizons artistiques.',
+      description:
+        'Groupe musical folk explorant de nouveaux horizons artistiques.',
     },
     datePublication: '04/05/2022',
     duree: 180,
@@ -163,11 +166,13 @@ export const TABLEAUVIDEOS: Video[] = [
       },
       {
         note: 10,
-        commentaire: "Vous êtes tellement talentueux! J'ai très hâte de vous voir en spectacle!",
+        commentaire:
+          "Vous êtes tellement talentueux! J'ai très hâte de vous voir en spectacle!",
       },
       {
         note: 10,
-        commentaire: "Les Vagabonds de l'Horizon: ma découverte musicale de l'année!",
+        commentaire:
+          "Les Vagabonds de l'Horizon: ma découverte musicale de l'année!",
       },
     ],
     image: 'https://picsum.photos/id/453/300/200',
@@ -183,7 +188,8 @@ export const TABLEAUVIDEOS: Video[] = [
       nom: 'Élise Maréchal',
       utilisateur: 'elisemarechal',
       verifie: true,
-      description: 'Artiste musicale émergente qui allie guitare, piano et voix pour livrer des pièces envoûtantes aux tonalités pop.',
+      description:
+        'Artiste musicale émergente qui allie guitare, piano et voix pour livrer des pièces envoûtantes aux tonalités pop.',
     },
     datePublication: '14/01/2023',
     duree: 240,
@@ -240,7 +246,7 @@ export const TABLEAUVIDEOS: Video[] = [
   {
     nom: 'Comment créer son propre terrarium? - Jardinez avec Sophie',
     description:
-      'Apprenez à créer votre propre terrarium en visionnant cette vidéo, qui survole chaque étape nécessaire pour y arriver!',
+      'Apprenez à créer votre propre terrarium en visionnant cette vidéo, qui explique chaque étape nécessaire pour y arriver!',
     code: '182ODA',
     categories: ['Style de vie'],
     auteur: {
@@ -248,7 +254,7 @@ export const TABLEAUVIDEOS: Video[] = [
       utilisateur: 'sophie_jardinage',
       verifie: false,
       description:
-        'Jardinière expérimentée partageant sa passion pour les plantes.',
+        'Jardinière expérimentée qui aime partager sa passion pour les plantes.',
     },
     datePublication: '15/01/2017',
     duree: 425,
@@ -259,7 +265,7 @@ export const TABLEAUVIDEOS: Video[] = [
       {
         note: 3,
         commentaire:
-          "Mon terrarium meurt à chaque fois que je tente l'expérience! Pourtant, je suis toutes tes instructions à la lettre.",
+          "Mon terrarium meurt à chaque fois que je tente l'expérience! Pourtant, je suis toutes tes instructions à la lettre. À l'aide!",
       },
       {
         note: 6,

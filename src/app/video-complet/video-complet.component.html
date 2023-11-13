@@ -45,7 +45,11 @@
           <h4>Catégories</h4>
           <mat-divider></mat-divider>
         </div>
-        <p>{{ videoComplet.categories }}</p>
+        <ul class="liste-categories">
+          <li *ngFor="let categorie of videoComplet.categories">
+            {{ categorie }}
+          </li>
+        </ul>
       </div>
 
       <div class="wrapper-item-description">
