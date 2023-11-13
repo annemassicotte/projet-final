@@ -85,7 +85,7 @@ export const TABLEAUVIDEOS: Video[] = [
     datePublication: '30/04/2020',
     duree: 360,
     nombreVues: 25000,
-    score: 5100,
+    score: 3100,
     sousTitres: 'ss',
     avis: [
       {
@@ -120,7 +120,7 @@ export const TABLEAUVIDEOS: Video[] = [
     datePublication: '23/07/2023',
     duree: 240,
     nombreVues: 13000,
-    score: 2000,
+    score: -5001,
     sousTitres: 'ss',
     avis: [
       {
@@ -259,7 +259,7 @@ export const TABLEAUVIDEOS: Video[] = [
     datePublication: '15/01/2017',
     duree: 425,
     nombreVues: 72000,
-    score: 300,
+    score: -7000,
     sousTitres: 'cc',
     avis: [
       {
