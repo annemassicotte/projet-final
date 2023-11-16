@@ -19,8 +19,9 @@ h4 {
   font-weight: 500;
 }
 
-.liste-categories{
-  padding-inline-start:1rem;
+.liste-categories {
+  padding-inline-start: 1rem;
+  margin-block:0;
 }
 
 .wrapper-sections-video-complet {
@@ -30,7 +31,7 @@ h4 {
 }
 
 .wrapper-video-infos,
-.wrapper-items-description{
+.wrapper-items-description {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -52,6 +53,6 @@ h4 {
   padding: 1rem;
 }
 
-.wrapper-commentaire .note {
+.note {
   font-weight: bold;
 }

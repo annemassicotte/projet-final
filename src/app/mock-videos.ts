@@ -1,4 +1,5 @@
 import { Video } from './video';
+import { TABLEAUUTILISATEURS } from "./mock-utilisateurs";
 
 export const TABLEAUVIDEOS: Video[] = [
   {
@@ -7,18 +8,12 @@ export const TABLEAUVIDEOS: Video[] = [
       'Découvrez le tout dernier membre de notre famille, Zorro! Dans ce 311e vlog, je vous présente mon adorable nouveau chien et partage avec vous les moments spéciaux de notre première rencontre.',
     code: '123AAA',
     categories: ['Vlog', 'Style de vie', 'Divertissement'],
-    auteur: {
-      nom: 'Emma Johnson',
-      utilisateur: 'emma_johnson',
-      verifie: true,
-      description:
-        "Amoureuse des animaux, passionnée de photographie et toujours en quête d'aventures.",
-    },
+    auteur: TABLEAUUTILISATEURS[0],
     datePublication: '12/12/2021',
     duree: 543,
     nombreVues: 43000,
     score: 5500,
-    sousTitres: 'cc',
+    sousTitres: 'ss',
     avis: [
       {
         note: 9,
@@ -43,13 +38,7 @@ export const TABLEAUVIDEOS: Video[] = [
       'Découvrez les endroits les plus incroyables pour une aventure en montagne dans cette vidéo palpitante!',
     code: '456ABC',
     categories: ['Aventure', 'Style de vie'],
-    auteur: {
-      nom: 'John Smith',
-      utilisateur: 'john_smith99',
-      verifie: false,
-      description:
-        'Amateur de randonnée et amoureux de la nature qui aime partager et faire découvrir sa passion.',
-    },
+    auteur: TABLEAUUTILISATEURS[1],
     datePublication: '16/08/2022',
     duree: 430,
     nombreVues: 7900,
@@ -76,12 +65,7 @@ export const TABLEAUVIDEOS: Video[] = [
       "Plongez avec moi dans l'histoire de la photographie et découvrez comment elle a évolué au fil des décennies!",
     code: '767JDK',
     categories: ['Historique', 'Éducation'],
-    auteur: {
-      nom: 'Alice Dupont',
-      utilisateur: 'alice_photographe',
-      verifie: false,
-      description: "Photographe professionnelle passionnée par l'art visuel.",
-    },
+    auteur: TABLEAUUTILISATEURS[2],
     datePublication: '30/04/2020',
     duree: 360,
     nombreVues: 25000,
@@ -111,12 +95,7 @@ export const TABLEAUVIDEOS: Video[] = [
       'Apprenez 5 astuces essentielles pour améliorer votre productivité au quotidien.',
     code: '819AIF',
     categories: ['Style de vie'],
-    auteur: {
-      nom: 'David Martin',
-      utilisateur: 'david_martin88',
-      verifie: false,
-      description: 'Entrepreneur et coach en efficacité.',
-    },
+    auteur: TABLEAUUTILISATEURS[3],
     datePublication: '23/07/2023',
     duree: 240,
     nombreVues: 13000,
@@ -143,16 +122,10 @@ export const TABLEAUVIDEOS: Video[] = [
       "Visionnez une performance live époustouflante du groupe Les Vagabonds de l'Horizon, qui interprètent leur nouvelle chanson Rêves d'émeraude.",
     code: '154JDI',
     categories: ['Musique'],
-    auteur: {
-      nom: "Les Vagabonds de l'Horizon",
-      utilisateur: 'lesvagabondsdelhorizon',
-      verifie: true,
-      description:
-        'Groupe musical folk explorant de nouveaux horizons artistiques.',
-    },
+    auteur: TABLEAUUTILISATEURS[4],
     datePublication: '04/05/2022',
     duree: 180,
-    nombreVues: 300500,
+    nombreVues: 90500,
     score: 8600,
     sousTitres: 'ss',
     avis: [
@@ -184,13 +157,7 @@ export const TABLEAUVIDEOS: Video[] = [
       "Découvrez le vidéoclip officiel tant attendu de ma nouvelle chanson, Lueurs d'aurore!",
     code: '482SUB',
     categories: ['Musique'],
-    auteur: {
-      nom: 'Élise Maréchal',
-      utilisateur: 'elisemarechal',
-      verifie: true,
-      description:
-        'Artiste musicale émergente qui allie guitare, piano et voix pour livrer des pièces envoûtantes aux tonalités pop.',
-    },
+    auteur: TABLEAUUTILISATEURS[5],
     datePublication: '14/01/2023',
     duree: 240,
     nombreVues: 59400,
@@ -217,12 +184,7 @@ export const TABLEAUVIDEOS: Video[] = [
       "Découvrez ma délicieuse recette de yogourt avec crumble aux fraises! Il s'agit du déjeuner parfait.",
     code: '130CIR',
     categories: ['Cuisine', 'Style de vie'],
-    auteur: {
-      nom: "Les Recettes d'Aurélie",
-      utilisateur: 'lesrecettesdaurelie',
-      verifie: false,
-      description: 'Passionnée de cuisine et créatrice de recettes originales.',
-    },
+    auteur: TABLEAUUTILISATEURS[6],
     datePublication: '08/03/2019',
     duree: 300,
     nombreVues: 42000,
@@ -249,13 +211,7 @@ export const TABLEAUVIDEOS: Video[] = [
       'Apprenez à créer votre propre terrarium en visionnant cette vidéo, qui explique chaque étape nécessaire pour y arriver!',
     code: '182ODA',
     categories: ['Style de vie'],
-    auteur: {
-      nom: 'Sophie Tremblay',
-      utilisateur: 'sophie_jardinage',
-      verifie: false,
-      description:
-        'Jardinière expérimentée qui aime partager sa passion pour les plantes.',
-    },
+    auteur: TABLEAUUTILISATEURS[7],
     datePublication: '15/01/2017',
     duree: 425,
     nombreVues: 72000,
@@ -276,3 +232,5 @@ export const TABLEAUVIDEOS: Video[] = [
     image: 'https://picsum.photos/id/530/300/200',
   },
 ];
+
+

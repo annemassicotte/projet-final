@@ -1,12 +1,16 @@
 import { Component, Input } from '@angular/core';
-import { Video } from '../video';
-import { TABLEAUVIDEOS } from '../mock-videos';
+import { Auteur } from "../auteur";
 
 @Component({
   selector: 'app-entete',
   templateUrl: './entete.component.html',
-  styleUrls: ['./entete.component.css']
+  styleUrls: ['./entete.component.css'],
 })
 export class EnteteComponent {
-  video: Video = TABLEAUVIDEOS[0];
+  @Input() utilisateur: Auteur = {
+    nom: '',
+    utilisateur: '',
+    verifie: false,
+    description: '',
+  };
 }

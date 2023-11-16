@@ -9,4 +9,5 @@ import { TABLEAUVIDEOS } from './mock-videos';
 })
 export class AppComponent {
   video: Video = TABLEAUVIDEOS[0];
+  utilisateur = this.video.auteur;
 }
