@@ -1,0 +1,167 @@
+<form class="formulaire" (ngSubmit)="onSubmit()" #formulaireVideo="ngForm">
+  <mat-form-field>
+    <mat-label>Nom de la vidéo</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder="Comment s'intitule votre vidéo?"
+      minlength="3"
+      maxlength="100"
+      [(ngModel)]="infosVideo.nom"
+      name="nomVideo"
+      id="nomVideo"
+      #nomVideo="ngModel"
+      required
+    />
+    <div
+      *ngIf="nomVideo.invalid && (nomVideo.dirty || nomVideo.touched)"
+      class="error"
+    >
+      <div *ngIf="nomVideo.errors?.['required']">
+        Le nom de la vidéo est obligatoire
+      </div>
+      <div
+        *ngIf="(nomVideo.errors?.['minlength'] || nomVideo.errors?.['maxlength'] )"
+      >
+        Le nom de la vidéo doit contenir entre 3 et 30 caractères.
+      </div>
+    </div>
+  </mat-form-field>
+  {{ infosVideo.nom }}
+
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea
+      matInput
+      placeholder="Décrivez le contenu de votre vidéo"
+      [(ngModel)]="infosVideo.description"
+      name="descriptionVideo"
+    ></textarea>
+  </mat-form-field>
+  {{ infosVideo.description }}
+
+  <mat-form-field>
+    <mat-label>Catégories </mat-label>
+    <mat-chip-grid #chipGridCategories>
+      <mat-chip-row
+        *ngFor="let categorie of categoriesChoisies"
+        (removed)="retirer(categorie)"
+      >
+        {{ categorie }}
+        <button matChipRemove>
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+    </mat-chip-grid>
+    <input
+      placeholder="Catégorie..."
+      name="input_categories"
+      [(ngModel)]="input_categories"
+      [matChipInputFor]="chipGridCategories"
+      [matAutocomplete]="auto"
+      (ngModelChange)="filtrer()"
+    />
+    <mat-autocomplete
+      #auto="matAutocomplete"
+      (optionSelected)="ajouter($event)"
+    >
+      <mat-option
+        *ngFor="let option of listeCategoriesFiltrees"
+        [value]="option"
+        >{{ option }}</mat-option
+      >
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Code</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder="Quel est le code de votre vidéo?"
+      [(ngModel)]="infosVideo.code"
+      name="codeVideo"
+      required
+    />
+  </mat-form-field>
+  {{ infosVideo.code }}
+
+  <mat-form-field>
+    <mat-label>Date de publication</mat-label>
+    <input
+      matInput
+      type="text"
+      id="dateVideo"
+      [matDatepicker]="picker"
+      [(ngModel)]="infosVideo.datePublication"
+      name="dateVideo"
+      #dateVideo="ngModel"
+      required
+      [min]="minDate"
+    />
+    
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <div
+      *ngIf="dateVideo.invalid && (dateVideo.dirty || dateVideo.touched)"
+      class="error"
+    >
+      <div *ngIf="dateVideo.errors?.['required']">
+        La date de la vidéo est obligatoire.
+      </div>
+      <div *ngIf="dateVideo.errors?.['min']">
+        La date de la vidéo doit être supérieure ou égale à la date du jour.
+      </div>
+    </div>
+  </mat-form-field>
+  {{ infosVideo.datePublication }}
+
+  <mat-label>Durée (secondes)</mat-label>
+  <mat-slider min="1" max="1000" step="1" discrete>
+    <input
+      matSliderThumb
+      [(ngModel)]="infosVideo.duree"
+      name="dureeVideo"
+      id="dureeVideo"
+      #dureeVideo="ngModel"
+      required
+    />
+  </mat-slider>
+  <div
+    *ngIf="dureeVideo.invalid && (dureeVideo.dirty || dureeVideo.touched)"
+    class="error"
+  >
+    <div *ngIf="dureeVideo.errors?.['required']">
+      La durée de la vidéo est obligatoire.
+    </div>
+    <div *ngIf="(dureeVideo.errors?.['min'] || dureeVideo.errors?.['max'] )">
+      La vidéo doit avoir une durée comprise entre 1 et 1000 secondes.
+    </div>
+  </div>
+
+  {{ infosVideo.duree }}
+
+  <mat-form-field>
+    <mat-label>Sous-titres</mat-label>
+    <select
+      matNativeControl
+      [(ngModel)]="infosVideo.sousTitres"
+      name="sousTitresVideo"
+      required
+    >
+      <option value="aucun">Aucun</option>
+      <option value="ss">Sous-titres</option>
+      <option value="cc">Sous-titrage pour sourd et malentendants</option>
+    </select>
+  </mat-form-field>
+  {{ infosVideo.sousTitres }}
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!formulaireVideo.form.valid"
+  >
+    Soumettre
+  </button>
+</form>

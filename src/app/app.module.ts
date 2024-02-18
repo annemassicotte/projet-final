@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,10 +12,23 @@ import { MenuAsideComponent } from './menu-aside/menu-aside.component';
 import { EnteteComponent } from './entete/entete.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import { AjoutAvisComponent } from './ajout-avis/ajout-avis.component';
 
 import { MatIconModule } from '@angular/material/icon';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import {
+  MatAutocompleteSelectedEvent,
+  MatAutocompleteModule,
+} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -25,17 +39,28 @@ import { MatDividerModule } from '@angular/material/divider';
     UtilisateurComponent,
     MenuAsideComponent,
     EnteteComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    FormulaireComponent,
+    AjoutAvisComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
     MatChipsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSliderModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatAutocompleteModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

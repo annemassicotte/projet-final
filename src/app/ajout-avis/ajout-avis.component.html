@@ -1,0 +1,31 @@
+<form (ngSubmit)="onSubmit()" #formulaireAvis="ngForm">
+  <div>
+    <button mat-icon-button aria-label="J'aime">
+      <mat-icon>thumb_up</mat-icon>
+    </button>
+    <button mat-icon-button aria-label="Je n'aime pas">
+      <mat-icon>thumb_down</mat-icon>
+    </button>
+  </div>
+
+  <mat-form-field class="commentaire">
+    <mat-label>Commentaire</mat-label>
+    <textarea
+      matInput
+      placeholder="Rédigez votre commentaire..."
+      [(ngModel)]="avis.commentaire"
+      name="commentaireVideo"
+      required
+    ></textarea>
+  </mat-form-field>
+  {{ avis.commentaire }}
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!formulaireAvis.form.valid"
+  >
+    Envoyer
+  </button>
+</form>
