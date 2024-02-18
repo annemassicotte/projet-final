@@ -1,1 +1,2 @@
-<app-petit-video *ngFor="let v of videos" [petitVideo]="v"></app-petit-video>
+<app-petit-video *ngFor="let v of videos | videosPopulaires" [petitVideo] ="v"></app-petit-video>
+<!-- <app-petit-video *ngFor="let v of videos | categorieFiltree:['Vlog', 'Aventure']" [petitVideo]="v"></app-petit-video> -->

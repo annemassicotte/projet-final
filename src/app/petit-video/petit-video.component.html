@@ -3,9 +3,9 @@
   <div class="wrapper-infos">
     <h3>{{ petitVideo.nom }}</h3>
     <app-utilisateur [utilisateur]="petitVideo.auteur"></app-utilisateur>
-    <p>{{ petitVideo.duree }} secondes</p>
+    <p>{{ petitVideo.duree | duree }}</p>
     <div class="wrapper_vues-date">
-      <p>{{ petitVideo.nombreVues }} visionnements</p>
+      <p>{{ petitVideo.nombreVues | vues }}</p>
       •
       <p>{{ petitVideo.datePublication }}</p>
     </div>

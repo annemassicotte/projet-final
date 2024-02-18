@@ -1,5 +1,5 @@
 import { Video } from './video';
-import { TABLEAUUTILISATEURS } from "./mock-utilisateurs";
+import { TABLEAUUTILISATEURS } from './mock-utilisateurs';
 
 export const TABLEAUVIDEOS: Video[] = [
   {
@@ -10,8 +10,8 @@ export const TABLEAUVIDEOS: Video[] = [
     categories: ['Vlog', 'Style de vie', 'Divertissement'],
     auteur: TABLEAUUTILISATEURS[0],
     datePublication: '12/12/2021',
-    duree: 543,
-    nombreVues: 43000,
+    duree: 3601,
+    nombreVues: 1,
     score: 5500,
     sousTitres: 'ss',
     avis: [
@@ -40,7 +40,7 @@ export const TABLEAUVIDEOS: Video[] = [
     categories: ['Aventure', 'Style de vie'],
     auteur: TABLEAUUTILISATEURS[1],
     datePublication: '16/08/2022',
-    duree: 430,
+    duree: 603,
     nombreVues: 7900,
     score: 3000,
     sousTitres: 'ss',
@@ -97,7 +97,7 @@ export const TABLEAUVIDEOS: Video[] = [
     categories: ['Style de vie'],
     auteur: TABLEAUUTILISATEURS[3],
     datePublication: '23/07/2023',
-    duree: 240,
+    duree: 247,
     nombreVues: 13000,
     score: -5001,
     sousTitres: 'ss',
@@ -232,5 +232,3 @@ export const TABLEAUVIDEOS: Video[] = [
     image: 'https://picsum.photos/id/530/300/200',
   },
 ];
-
-

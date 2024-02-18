@@ -25,10 +25,15 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import {
   MatAutocompleteSelectedEvent,
   MatAutocompleteModule,
 } from '@angular/material/autocomplete';
+import { DureePipe } from './duree.pipe';
+import { VuesPipe } from './vues.pipe';
+import { VideosPopulairesPipe } from './videos-populaires.pipe';
+import { CategorieFiltreePipe } from './categorie-filtree.pipe';
 
 @NgModule({
   declarations: [
@@ -42,6 +47,11 @@ import {
     CategoriesComponent,
     FormulaireComponent,
     AjoutAvisComponent,
+    DureePipe,
+    VuesPipe,
+    VideosPopulairesPipe,
+    CategorieFiltreePipe,
+
   ],
   imports: [
     BrowserModule,
@@ -59,6 +69,7 @@ import {
     MatSelectModule,
     MatButtonModule,
     MatAutocompleteModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

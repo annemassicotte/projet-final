@@ -3,7 +3,7 @@
     <img [src]="videoComplet.image" [alt]="videoComplet.nom" />
     <div class="wrapper-infos-sous-video">
       <h2>{{ videoComplet.nom }}</h2>
-      <p>{{ videoComplet.duree }} secondes</p>
+      <p>{{ videoComplet.duree | duree}}</p>
       <div *ngIf="videoComplet.sousTitres == 'ss'; else ccSubtitle">
         <mat-icon
           aria-hidden="false"
@@ -29,7 +29,7 @@
     <div class="wrapper-items-description">
       <div class="wrapper-item-description">
         <p>Publiée le {{ videoComplet.datePublication }}</p>
-        <p>{{ videoComplet.nombreVues }} visionnements</p>
+        <p matTooltip={{videoComplet.nombreVues}}>{{ videoComplet.nombreVues | vues }}</p>
         <p>Score: {{ videoComplet.score }}</p>
       </div>
 
