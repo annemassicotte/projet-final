@@ -22,7 +22,7 @@ export class VuesPipe implements PipeTransform {
       const milliers = Math.floor(value / 1000);
       return `${milliers}K ${pluralMapping.pluriel}`;
     } else {
-      const millions = value / 1000000;
+      const millions = Math.floor(value / 1000000);
       return `${millions}M ${pluralMapping.pluriel}`;
     }
   }

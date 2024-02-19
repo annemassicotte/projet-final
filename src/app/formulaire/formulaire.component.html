@@ -38,7 +38,7 @@
       name="descriptionVideo"
     ></textarea>
   </mat-form-field>
-  {{ infosVideo.description}}
+  {{ infosVideo.description }}
 
   <mat-form-field>
     <mat-label>Catégories </mat-label>
@@ -93,13 +93,13 @@
       type="text"
       id="dateVideo"
       [matDatepicker]="picker"
-      [(ngModel)]="infosVideo.datePublication"
+      [(ngModel)]="infosVideo.date_publication"
       name="dateVideo"
       #dateVideo="ngModel"
       required
       [min]="minDate"
     />
-    
+
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
     <div
@@ -114,7 +114,7 @@
       </div>
     </div>
   </mat-form-field>
-  {{ infosVideo.datePublication }}
+  {{ infosVideo.date_publication }}
 
   <mat-label>Durée (secondes)</mat-label>
   <mat-slider min="1" max="1000" step="1" discrete>

@@ -8,10 +8,10 @@ import { Auteur } from '../auteur';
 })
 export class UtilisateurComponent {
   @Input() utilisateur: Auteur = {
-    nom: '',
+    nom_auteur: '',
     utilisateur: '',
     verifie: false,
-    description: '',
+    description_auteur: '',
   };
   @Input() userHeaderClass: boolean = false;
   @Input() showDescription: boolean = false;

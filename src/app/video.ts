@@ -1,19 +1,18 @@
-import { Auteur } from "./auteur";
-import { Avis } from "./avis";
-
+import { Auteur } from './auteur';
+import { Avis } from './avis';
 
 export interface Video {
-    nom: string;
-    description: string;
-    code: string;
-    categories: string[];
-    auteur: Auteur;
-    datePublication: string;
-    duree: number;
-    nombreVues: number;
-    score: number;
-    sousTitres: string;
-    avis: Avis[];
-    image: string;
+  id: number;
+  nom: string;
+  description: string;
+  code: string;
+  categories: string[];
+  auteur: Auteur;
+  date_publication: string;
+  duree: number;
+  nombre_vues: number;
+  score: number;
+  sousTitres: string;
+  avis: Avis[];
+  url_image: string;
 }
-

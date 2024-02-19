@@ -8,22 +8,23 @@ import { Video } from '../video';
 })
 export class PetitVideoComponent {
   @Input() petitVideo: Video = {
+    id: 0,
     nom: '',
     description: '',
     code: '',
     categories: [],
     auteur: {
-      nom: '',
+      nom_auteur: '',
       utilisateur: '',
       verifie: false,
-      description: '',
+      description_auteur: '',
     },
-    datePublication: '',
+    date_publication: '',
     duree: 0,
-    nombreVues: 0,
+    nombre_vues: 0,
     score: 0,
     sousTitres: '',
     avis: [],
-    image: '',
+    url_image: '',
   };
 }

@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { PetitVideoComponent } from './petit-video/petit-video.component';
 import { VideoCompletComponent } from './video-complet/video-complet.component';
@@ -35,6 +36,8 @@ import { VuesPipe } from './vues.pipe';
 import { VideosPopulairesPipe } from './videos-populaires.pipe';
 import { CategorieFiltreePipe } from './categorie-filtree.pipe';
 
+import {VideoService} from './video.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +59,7 @@ import { CategorieFiltreePipe } from './categorie-filtree.pipe';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
@@ -71,7 +75,7 @@ import { CategorieFiltreePipe } from './categorie-filtree.pipe';
     MatAutocompleteModule,
     MatTooltipModule,
   ],
-  providers: [],
+  providers: [VideoService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

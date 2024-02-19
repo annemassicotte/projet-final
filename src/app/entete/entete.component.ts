@@ -8,9 +8,9 @@ import { Auteur } from "../auteur";
 })
 export class EnteteComponent {
   @Input() utilisateur: Auteur = {
-    nom: '',
+    nom_auteur: '',
     utilisateur: '',
     verifie: false,
-    description: '',
+    description_auteur: '',
   };
 }

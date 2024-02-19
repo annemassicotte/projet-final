@@ -1,9 +1,9 @@
 <div class="wrapper-sections-video-complet">
   <div class="wrapper-video-infos">
-    <img [src]="videoComplet.image" [alt]="videoComplet.nom" />
+    <img [src]="videoComplet.url_image" [alt]="videoComplet.nom" />
     <div class="wrapper-infos-sous-video">
       <h2>{{ videoComplet.nom }}</h2>
-      <p>{{ videoComplet.duree | duree}}</p>
+      <p>{{ videoComplet.duree | duree }}</p>
       <div *ngIf="videoComplet.sousTitres == 'ss'; else ccSubtitle">
         <mat-icon
           aria-hidden="false"
@@ -28,8 +28,10 @@
 
     <div class="wrapper-items-description">
       <div class="wrapper-item-description">
-        <p>Publiée le {{ videoComplet.datePublication }}</p>
-        <p matTooltip={{videoComplet.nombreVues}}>{{ videoComplet.nombreVues | vues }}</p>
+        <p>Publiée le {{ videoComplet.date_publication }}</p>
+        <p matTooltip="{{ videoComplet.nombre_vues }}">
+          {{ videoComplet.nombre_vues | vues }}
+        </p>
         <p>Score: {{ videoComplet.score }}</p>
       </div>
 

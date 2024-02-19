@@ -1,17 +1,18 @@
-import { Video } from './video';
+/* import { Video } from './video';
 import { TABLEAUUTILISATEURS } from './mock-utilisateurs';
 
 export const TABLEAUVIDEOS: Video[] = [
   {
+    id: 1,
     nom: 'Je vous présente mon nouveau chien! - VLOG #311',
     description:
       'Découvrez le tout dernier membre de notre famille, Zorro! Dans ce 311e vlog, je vous présente mon adorable nouveau chien et partage avec vous les moments spéciaux de notre première rencontre.',
     code: '123AAA',
     categories: ['Vlog', 'Style de vie', 'Divertissement'],
     auteur: TABLEAUUTILISATEURS[0],
-    datePublication: '12/12/2021',
+    date_publication: '12/12/2021',
     duree: 3601,
-    nombreVues: 1,
+    nombre_vues: 1,
     score: 5500,
     sousTitres: 'ss',
     avis: [
@@ -29,19 +30,20 @@ export const TABLEAUVIDEOS: Video[] = [
         commentaire: "Son nom lui va trop bien! J'adore!",
       },
     ],
-    image: 'https://picsum.photos/id/237/300/200',
+    url_image: 'https://picsum.photos/id/237/300/200',
   },
 
   {
+    id: 1,
     nom: 'Top 10 des plus beaux endroits pour une excursion en montagne',
     description:
       'Découvrez les endroits les plus incroyables pour une aventure en montagne dans cette vidéo palpitante!',
     code: '456ABC',
     categories: ['Aventure', 'Style de vie'],
     auteur: TABLEAUUTILISATEURS[1],
-    datePublication: '16/08/2022',
+    date_publication: '16/08/2022',
     duree: 603,
-    nombreVues: 7900,
+    nombre_vues: 7900,
     score: 3000,
     sousTitres: 'ss',
     avis: [
@@ -56,19 +58,20 @@ export const TABLEAUVIDEOS: Video[] = [
           "Merci pour cette vidéo, John! J'ajoute tes recommandations à ma liste d'endroits à explorer.",
       },
     ],
-    image: 'https://picsum.photos/id/29/300/200',
+    url_image: 'https://picsum.photos/id/29/300/200',
   },
 
   {
+    id: 1,
     nom: "L'évolution de la photographie au fil des années",
     description:
       "Plongez avec moi dans l'histoire de la photographie et découvrez comment elle a évolué au fil des décennies!",
     code: '767JDK',
     categories: ['Historique', 'Éducation'],
     auteur: TABLEAUUTILISATEURS[2],
-    datePublication: '30/04/2020',
+    date_publication: '30/04/2020',
     duree: 360,
-    nombreVues: 25000,
+    nombre_vues: 25000,
     score: 3100,
     sousTitres: 'ss',
     avis: [
@@ -86,19 +89,20 @@ export const TABLEAUVIDEOS: Video[] = [
           'Ton contenu est très informatif, comme toujours! Continue ton bon travail!',
       },
     ],
-    image: 'https://picsum.photos/id/250/300/200',
+    url_image: 'https://picsum.photos/id/250/300/200',
   },
 
   {
+    id: 1,
     nom: 'Les 5 meilleurs trucs pour être plus productif - À VOIR!',
     description:
       'Apprenez 5 astuces essentielles pour améliorer votre productivité au quotidien.',
     code: '819AIF',
     categories: ['Style de vie'],
     auteur: TABLEAUUTILISATEURS[3],
-    datePublication: '23/07/2023',
+    date_publication: '23/07/2023',
     duree: 247,
-    nombreVues: 13000,
+    nombre_vues: 13000,
     score: -5001,
     sousTitres: 'ss',
     avis: [
@@ -113,19 +117,20 @@ export const TABLEAUVIDEOS: Video[] = [
           "Je vais tenter de mettre tes trucs en pratique, merci David! Mon seul commentaire constructif serait d'alléger un peu tes prochaines vidéos, car il y a beaucoup d'animations.",
       },
     ],
-    image: 'https://picsum.photos/id/180/300/200',
+    url_image: 'https://picsum.photos/id/180/300/200',
   },
 
   {
+    id: 1,
     nom: "Les Vagabonds de l'Horizon - Rêves d'émeraude (Performance Live)",
     description:
       "Visionnez une performance live époustouflante du groupe Les Vagabonds de l'Horizon, qui interprètent leur nouvelle chanson Rêves d'émeraude.",
     code: '154JDI',
     categories: ['Musique'],
     auteur: TABLEAUUTILISATEURS[4],
-    datePublication: '04/05/2022',
+    date_publication: '04/05/2022',
     duree: 180,
-    nombreVues: 90500,
+    nombre_vues: 90500,
     score: 8600,
     sousTitres: 'ss',
     avis: [
@@ -148,19 +153,20 @@ export const TABLEAUVIDEOS: Video[] = [
           "Les Vagabonds de l'Horizon: ma découverte musicale de l'année!",
       },
     ],
-    image: 'https://picsum.photos/id/453/300/200',
+    url_image: 'https://picsum.photos/id/453/300/200',
   },
 
   {
+    id: 1,
     nom: "Élise Maréchal - Lueurs d'aurore (Vidéoclip officiel)",
     description:
       "Découvrez le vidéoclip officiel tant attendu de ma nouvelle chanson, Lueurs d'aurore!",
     code: '482SUB',
     categories: ['Musique'],
     auteur: TABLEAUUTILISATEURS[5],
-    datePublication: '14/01/2023',
+    date_publication: '14/01/2023',
     duree: 240,
-    nombreVues: 59400,
+    nombre_vues: 59400,
     score: 6800,
     sousTitres: 'ss',
     avis: [
@@ -175,19 +181,20 @@ export const TABLEAUVIDEOS: Video[] = [
           "J'aime beaucoup la vidéo, elle s'agence très bien avec la chanson. J'ai hâte d'en voir plus!",
       },
     ],
-    image: 'https://picsum.photos/id/399/300/200',
+    url_image: 'https://picsum.photos/id/399/300/200',
   },
 
   {
+    id: 1,
     nom: "Yogourt avec crumble aux fraises maison - Les recettes d'Aurélie",
     description:
       "Découvrez ma délicieuse recette de yogourt avec crumble aux fraises! Il s'agit du déjeuner parfait.",
     code: '130CIR',
     categories: ['Cuisine', 'Style de vie'],
     auteur: TABLEAUUTILISATEURS[6],
-    datePublication: '08/03/2019',
+    date_publication: '08/03/2019',
     duree: 300,
-    nombreVues: 42000,
+    nombre_vues: 42000,
     score: 4600,
     sousTitres: 'cc',
     avis: [
@@ -202,19 +209,20 @@ export const TABLEAUVIDEOS: Video[] = [
           "Merci pour le partage, j'aime bien faire ce yogourt pour déjeuner! Le crumble est un peu sucré, mais qui n'aime pas le sucre?",
       },
     ],
-    image: 'https://picsum.photos/id/493/300/200',
+    url_image: 'https://picsum.photos/id/493/300/200',
   },
 
   {
+    id: 1,
     nom: 'Comment créer son propre terrarium? - Jardinez avec Sophie',
     description:
       'Apprenez à créer votre propre terrarium en visionnant cette vidéo, qui explique chaque étape nécessaire pour y arriver!',
     code: '182ODA',
     categories: ['Style de vie'],
     auteur: TABLEAUUTILISATEURS[7],
-    datePublication: '15/01/2017',
+    date_publication: '15/01/2017',
     duree: 425,
-    nombreVues: 72000,
+    nombre_vues: 72000,
     score: -7000,
     sousTitres: 'cc',
     avis: [
@@ -229,6 +237,7 @@ export const TABLEAUVIDEOS: Video[] = [
           'Bonne vidéo, mais je trouve que ton débit de voix est un peu rapide. Prends ton temps :)',
       },
     ],
-    image: 'https://picsum.photos/id/530/300/200',
+    url_image: 'https://picsum.photos/id/530/300/200',
   },
 ];
+ */

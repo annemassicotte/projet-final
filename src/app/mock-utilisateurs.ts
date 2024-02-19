@@ -2,56 +2,58 @@ import { Auteur } from './auteur';
 
 export const TABLEAUUTILISATEURS: Auteur[] = [
   {
-    nom: 'Emma Johnson',
+    nom_auteur: 'Emma Johnson',
     utilisateur: 'emma_johnson',
     verifie: true,
-    description:
+    description_auteur:
       "Amoureuse des animaux, passionnée de photographie et toujours en quête d'aventures.",
   },
   {
-    nom: 'John Smith',
+    nom_auteur: 'John Smith',
     utilisateur: 'john_smith99',
     verifie: false,
-    description:
+    description_auteur:
       'Amateur de randonnée et amoureux de la nature qui aime partager et faire découvrir sa passion.',
   },
   {
-    nom: 'Alice Dupont',
+    nom_auteur: 'Alice Dupont',
     utilisateur: 'alice_photographe',
     verifie: false,
-    description: "Photographe professionnelle passionnée par l'art visuel.",
+    description_auteur:
+      "Photographe professionnelle passionnée par l'art visuel.",
   },
   {
-    nom: 'David Martin',
+    nom_auteur: 'David Martin',
     utilisateur: 'david_martin88',
     verifie: false,
-    description: 'Entrepreneur et coach en efficacité.',
+    description_auteur: 'Entrepreneur et coach en efficacité.',
   },
   {
-    nom: "Les Vagabonds de l'Horizon",
+    nom_auteur: "Les Vagabonds de l'Horizon",
     utilisateur: 'lesvagabondsdelhorizon',
     verifie: true,
-    description:
+    description_auteur:
       'Groupe musical folk explorant de nouveaux horizons artistiques.',
   },
   {
-    nom: 'Élise Maréchal',
+    nom_auteur: 'Élise Maréchal',
     utilisateur: 'elisemarechal',
     verifie: true,
-    description:
+    description_auteur:
       'Artiste musicale émergente qui allie guitare, piano et voix pour livrer des pièces envoûtantes aux tonalités pop.',
   },
   {
-    nom: "Les Recettes d'Aurélie",
+    nom_auteur: "Les Recettes d'Aurélie",
     utilisateur: 'lesrecettesdaurelie',
     verifie: false,
-    description: 'Passionnée de cuisine et créatrice de recettes originales.',
+    description_auteur:
+      'Passionnée de cuisine et créatrice de recettes originales.',
   },
   {
-    nom: 'Sophie Tremblay',
+    nom_auteur: 'Sophie Tremblay',
     utilisateur: 'sophie_jardinage',
     verifie: false,
-    description:
+    description_auteur:
       'Jardinière expérimentée qui aime partager sa passion pour les plantes.',
   },
 ];

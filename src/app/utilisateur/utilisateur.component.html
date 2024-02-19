@@ -1,7 +1,7 @@
 <div [ngClass]="{ 'user-entete': userHeaderClass }" class="wrapper-user">
   <div>
     <div class="user-verified">
-      <p>{{ utilisateur.nom }}</p>
+      <p>{{ utilisateur.nom_auteur }}</p>
       <div *ngIf="utilisateur.verifie">
         <mat-icon
           aria-hidden="false"
@@ -13,6 +13,6 @@
     <p class="username">{{ "\u0040" + utilisateur.utilisateur }}</p>
   </div>
   <div *ngIf="showDescription">
-    <p>{{ utilisateur.description }}</p>
+    <p>{{ utilisateur.description_auteur }}</p>
   </div>
 </div>

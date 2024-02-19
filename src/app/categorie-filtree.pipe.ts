@@ -7,7 +7,7 @@ import { Video } from './video';
 export class CategorieFiltreePipe implements PipeTransform {
   transform(videos: Video[], selectedCategories: string[]): Video[] {
     if (!selectedCategories || selectedCategories.length === 0) {
-      return videos; // If no categories are selected, return all videos
+      return videos;
     }
 
     return videos.filter((video) =>
