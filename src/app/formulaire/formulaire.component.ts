@@ -46,11 +46,20 @@ export class FormulaireComponent {
 
   ngOnInit(): void {}
 
-  addVideo(videoFormAjout: NgForm) {
-    if (videoFormAjout.valid) {
+  addVideo(videoForm: NgForm) {
+    if (videoForm.valid) {
       this.videoService.addVideo(this.video).subscribe((_) => {
-        videoFormAjout.resetForm();
+        videoForm.resetForm();
         this.dialogRef.close('Vidéo ajouté!');
+      });
+    }
+  }
+
+  updateVideo(videoForm: NgForm) {
+    if (videoForm.valid) {
+      this.videoService.updateVideo(this.video).subscribe((_) => {
+        videoForm.resetForm();
+        this.dialogRef.close('Vidéo modifié!');
       });
     }
   }

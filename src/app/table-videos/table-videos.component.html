@@ -26,10 +26,10 @@
     <td mat-cell *matCellDef="let video">{{ video.date_publication }}</td>
   </ng-container>
 
-  <!-- Colonne Nombre de vues -->
-  <ng-container matColumnDef="nombre_vues">
-    <th mat-header-cell *matHeaderCellDef>Nombre de vues</th>
-    <td mat-cell *matCellDef="let video">{{ video.nombre_vues }}</td>
+  <!-- Colonne Durée -->
+  <ng-container matColumnDef="duree">
+    <th mat-header-cell *matHeaderCellDef>Durée</th>
+    <td mat-cell *matCellDef="let video">{{ video.duree | duree }}</td>
   </ng-container>
 
   <!-- Colonne Score -->
@@ -43,6 +43,13 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let video">
+      <button
+        mat-icon-button
+        aria-label="Modifier"
+        (click)="openDialog(video)"
+      >
+        <mat-icon>edit</mat-icon>
+      </button>
       <button
         mat-icon-button
         aria-label="Supprimer"

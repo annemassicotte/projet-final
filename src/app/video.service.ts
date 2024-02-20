@@ -33,6 +33,19 @@ export class VideoService {
     return this.http.post<void>(this.API_URL, video, httpOptions);
   }
 
+  updateVideo(video: Video): Observable<void> {
+    video.date_publication = formatDate(
+      video.date_publication,
+      'yyyy-MM-dd',
+      'en'
+    );
+    return this.http.put<void>(
+      `${this.API_URL}/?id=${video.id}`,
+      video,
+      httpOptions
+    );
+  }
+
   deleteVideo(id: string): Observable<void> {
     return this.http.delete<void>(`${this.API_URL}/?id=${id}`);
   }

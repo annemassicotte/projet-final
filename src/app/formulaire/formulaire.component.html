@@ -1,4 +1,4 @@
-<form class="formulaire" #videoFormAjout="ngForm">
+<form class="formulaire" #videoForm="ngForm">
   <mat-form-field>
     <mat-label>Nom de la vidéo</mat-label>
     <input
@@ -11,7 +11,7 @@
       name="nomVideo"
       id="nomVideo"
       #nomVideo="ngModel"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
       required
     />
     <div
@@ -36,7 +36,7 @@
       placeholder="Décrivez le contenu de votre vidéo"
       [(ngModel)]="video.description"
       name="descriptionVideo"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
     ></textarea>
   </mat-form-field>
 
@@ -81,7 +81,7 @@
       placeholder="Quel est le code de votre vidéo?"
       [(ngModel)]="video.code"
       name="codeVideo"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
       required
     />
   </mat-form-field>
@@ -98,7 +98,7 @@
       #dateVideo="ngModel"
       required
       [min]="minDate"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
     />
 
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
@@ -125,7 +125,7 @@
       id="dureeVideo"
       #dureeVideo="ngModel"
       required
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
     />
   </mat-slider>
   <div
@@ -146,7 +146,7 @@
       matNativeControl
       [(ngModel)]="video.sous_titres"
       name="sous_titresitresVideo"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
       required
     >
       <option value="aucun">Aucun</option>
@@ -163,7 +163,7 @@
       placeholder="Quelle est l'URL de l'image de votre vidéo?"
       [(ngModel)]="video.url_image"
       name="url_image"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
       required
     />
   </mat-form-field>
@@ -176,7 +176,7 @@
       placeholder=""
       [(ngModel)]="video.score"
       name="score"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
       required
     />
   </mat-form-field> -->
@@ -189,12 +189,12 @@
       placeholder=""
       [(ngModel)]="video.nombre_vues"
       name="nombre_vues"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
       required
     />
   </mat-form-field> -->
 
- <!--  <mat-form-field>
+  <!--  <mat-form-field>
     <mat-label>Catégories</mat-label>
     <input
       matInput
@@ -202,7 +202,7 @@
       placeholder=""
       [(ngModel)]="video.categories"
       name="categories"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
     />
   </mat-form-field> -->
 
@@ -214,7 +214,7 @@
       placeholder=""
       [(ngModel)]="video.auteur.nom_auteur"
       name="nombre_auteur"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
       required
     />
   </mat-form-field>
@@ -227,7 +227,7 @@
       placeholder=""
       [(ngModel)]="video.auteur.description_auteur"
       name="description_auteur"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
       required
     />
   </mat-form-field>
@@ -240,7 +240,7 @@
       placeholder=""
       [(ngModel)]="video.auteur.verifie"
       name="verifie"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
       required
     />
   </mat-form-field>
@@ -253,20 +253,31 @@
       placeholder=""
       [(ngModel)]="video.auteur.utilisateur"
       name="utilisateur"
-      (keyup.enter)="addVideo(videoFormAjout)"
+      (keyup.enter)="addVideo(videoForm)"
       required
     />
   </mat-form-field> -->
-
   <button
+    *ngIf="video.id; else boutonAjout"
     mat-raised-button
     mat-aria-label="Ajouter"
     color="primary"
-    [disabled]="!videoFormAjout.form.valid"
-    (click)="addVideo(videoFormAjout)"
+    [disabled]="!videoForm.form.valid"
+    (click)="updateVideo(videoForm)"
   >
-    Ajouter
+    Modifier
   </button>
+  <ng-template #boutonAjout>
+    <button
+      mat-raised-button
+      mat-aria-label="Ajouter"
+      color="primary"
+      [disabled]="!videoForm.form.valid"
+      (click)="addVideo(videoForm)"
+    >
+      Ajouter
+    </button>
+  </ng-template>
 
   <button mat-button mat-aria-label="Annuler" (click)="annuler()">
     Annuler

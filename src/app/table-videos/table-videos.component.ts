@@ -15,14 +15,7 @@ import { FormulaireComponent } from '../formulaire/formulaire.component';
 })
 export class TableVideosComponent implements OnInit {
   dataSourceVideos: MatTableDataSource<Video> = new MatTableDataSource();
-  columnsToDisplay = [
-    'nom',
-    'code',
-    'date_publication',
-    'nombre_vues',
-    'score',
-    'actions'
-  ];
+  columnsToDisplay = ['nom', 'code', 'date_publication', 'duree', 'actions'];
   @ViewChild(MatTable) tableVideos!: MatTable<Video>;
 
   constructor(private videoService: VideoService, public dialog: MatDialog) {}
@@ -54,6 +47,10 @@ export class TableVideosComponent implements OnInit {
     });
   }
 
+ /*  showFormVideo(video?: Video) {
+    this.openDialog(video);
+  } */
+
   deleteVideo(id: string) {
     this.videoService.deleteVideo(id).subscribe((_) => {
       this.getVideos();
@@ -61,10 +58,10 @@ export class TableVideosComponent implements OnInit {
   }
 }
 
-/* addVideo(videoFormAjout: NgForm) {
-    if (videoFormAjout.valid) {      
+/* addVideo(videoForm: NgForm) {
+    if (videoForm.valid) {      
       this.videoService.addVideo(this.video).subscribe((_) => {
-        videoFormAjout.resetForm();
+        videoForm.resetForm();
         this.getVideos();
       });
     }
