@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AvisService {
-  API_URL = 'http://localhost/tp2-api/?id=';
+  API_URL = 'http://localhost/tp2-api/avis/';
   constructor(private http: HttpClient) {}
 
-  getAvis(id: number): Observable<Avis[]> {
-    return this.http.get<Avis[]>(this.API_URL+id);
+  getAvis(id: string): Observable<Avis[]> {
+    return this.http.get<Avis[]>(`${this.API_URL}/?id=${id}`);
   }
 }
 

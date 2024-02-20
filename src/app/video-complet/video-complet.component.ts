@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Video } from '../video';
 import { VideoService } from "../video.service";
 import { ActivatedRoute } from "@angular/router";
+import { AvisService } from "../avis.service";
 
 @Component({
   selector: 'app-video-complet',
@@ -32,11 +33,13 @@ export class VideoCompletComponent implements OnInit {
 
   constructor(
     private videoService: VideoService,
+    private avisService: AvisService,
     private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.getVideo();
+    this.getAvis();
   }
 
   getVideo(): void {
@@ -45,6 +48,15 @@ export class VideoCompletComponent implements OnInit {
       this.videoService
         .getVideoById(id)
         .subscribe((resultat) => (this.videoComplet = resultat));
+    }
+  }
+
+  getAvis(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.avisService
+        .getAvis(id)
+        .subscribe((resultat) => (this.videoComplet.avis = resultat));
     }
   }
 }
