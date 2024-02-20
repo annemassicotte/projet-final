@@ -1,12 +1,14 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Video } from '../video';
+import { VideoService } from "../video.service";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-video-complet',
   templateUrl: './video-complet.component.html',
   styleUrls: ['../../shared/shared_style.css', './video-complet.component.css'],
 })
-export class VideoCompletComponent {
+export class VideoCompletComponent implements OnInit {
   @Input() videoComplet: Video = {
     id: 0,
     nom: '',
@@ -23,8 +25,26 @@ export class VideoCompletComponent {
     duree: 0,
     nombre_vues: 0,
     score: 0,
-    sousTitres: '',
+    sous_titres: '',
     avis: [],
     url_image: '',
   };
+
+  constructor(
+    private videoService: VideoService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    this.getVideo();
+  }
+
+  getVideo(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.videoService
+        .getVideoById(id)
+        .subscribe((resultat) => (this.videoComplet = resultat));
+    }
+  }
 }

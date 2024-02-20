@@ -1,0 +1,58 @@
+<button
+  mat-raised-button
+  mat-aria-label="Ajouter"
+  color="primary"
+  (click)="openDialog(undefined)"
+>
+  Ajouter une vidéo
+</button>
+
+<table mat-table #tableVideos [dataSource]="dataSourceVideos">
+  <!-- Colonne Nom -->
+  <ng-container matColumnDef="nom">
+    <th mat-header-cell *matHeaderCellDef>Nom</th>
+    <td mat-cell *matCellDef="let video">{{ video.nom }}</td>
+  </ng-container>
+
+  <!-- Colonne Code -->
+  <ng-container matColumnDef="code">
+    <th mat-header-cell *matHeaderCellDef>Code</th>
+    <td mat-cell *matCellDef="let video">{{ video.code }}</td>
+  </ng-container>
+
+  <!-- Colonne Date de publication -->
+  <ng-container matColumnDef="date_publication">
+    <th mat-header-cell *matHeaderCellDef>Date de publication</th>
+    <td mat-cell *matCellDef="let video">{{ video.date_publication }}</td>
+  </ng-container>
+
+  <!-- Colonne Nombre de vues -->
+  <ng-container matColumnDef="nombre_vues">
+    <th mat-header-cell *matHeaderCellDef>Nombre de vues</th>
+    <td mat-cell *matCellDef="let video">{{ video.nombre_vues }}</td>
+  </ng-container>
+
+  <!-- Colonne Score -->
+  <ng-container matColumnDef="score">
+    <th mat-header-cell *matHeaderCellDef>Score</th>
+    <td mat-cell *matCellDef="let video">{{ video.score }}</td>
+  </ng-container>
+
+  <!-- Colonne Actions -->
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let video">
+      <button
+        mat-icon-button
+        aria-label="Supprimer"
+        (click)="deleteVideo(video.id)"
+      >
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></tr>
+</table>

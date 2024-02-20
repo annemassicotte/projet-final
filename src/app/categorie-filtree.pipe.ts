@@ -11,7 +11,9 @@ export class CategorieFiltreePipe implements PipeTransform {
     }
 
     return videos.filter((video) =>
-      video.categories.some((category) => selectedCategories.includes(category))
+      video.categories.some((category) =>
+        selectedCategories.includes(category)
+      )
     );
   }
 }

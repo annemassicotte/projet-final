@@ -1,4 +1,4 @@
-<form class="formulaire" (ngSubmit)="onSubmit()" #formulaireVideo="ngForm">
+<form class="formulaire" #videoFormAjout="ngForm">
   <mat-form-field>
     <mat-label>Nom de la vidéo</mat-label>
     <input
@@ -7,10 +7,11 @@
       placeholder="Comment s'intitule votre vidéo?"
       minlength="3"
       maxlength="100"
-      [(ngModel)]="infosVideo.nom"
+      [(ngModel)]="video.nom"
       name="nomVideo"
       id="nomVideo"
       #nomVideo="ngModel"
+      (keyup.enter)="addVideo(videoFormAjout)"
       required
     />
     <div
@@ -27,20 +28,19 @@
       </div>
     </div>
   </mat-form-field>
-  {{ infosVideo.nom }}
 
   <mat-form-field>
     <mat-label>Description</mat-label>
     <textarea
       matInput
       placeholder="Décrivez le contenu de votre vidéo"
-      [(ngModel)]="infosVideo.description"
+      [(ngModel)]="video.description"
       name="descriptionVideo"
+      (keyup.enter)="addVideo(videoFormAjout)"
     ></textarea>
   </mat-form-field>
-  {{ infosVideo.description }}
 
-  <mat-form-field>
+  <!-- <mat-form-field>
     <mat-label>Catégories </mat-label>
     <mat-chip-grid #chipGridCategories>
       <mat-chip-row
@@ -71,7 +71,7 @@
         >{{ option }}</mat-option
       >
     </mat-autocomplete>
-  </mat-form-field>
+  </mat-form-field> -->
 
   <mat-form-field>
     <mat-label>Code</mat-label>
@@ -79,12 +79,12 @@
       matInput
       type="text"
       placeholder="Quel est le code de votre vidéo?"
-      [(ngModel)]="infosVideo.code"
+      [(ngModel)]="video.code"
       name="codeVideo"
+      (keyup.enter)="addVideo(videoFormAjout)"
       required
     />
   </mat-form-field>
-  {{ infosVideo.code }}
 
   <mat-form-field>
     <mat-label>Date de publication</mat-label>
@@ -93,11 +93,12 @@
       type="text"
       id="dateVideo"
       [matDatepicker]="picker"
-      [(ngModel)]="infosVideo.date_publication"
+      [(ngModel)]="video.date_publication"
       name="dateVideo"
       #dateVideo="ngModel"
       required
       [min]="minDate"
+      (keyup.enter)="addVideo(videoFormAjout)"
     />
 
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
@@ -114,17 +115,17 @@
       </div>
     </div>
   </mat-form-field>
-  {{ infosVideo.date_publication }}
 
   <mat-label>Durée (secondes)</mat-label>
   <mat-slider min="1" max="1000" step="1" discrete>
     <input
       matSliderThumb
-      [(ngModel)]="infosVideo.duree"
+      [(ngModel)]="video.duree"
       name="dureeVideo"
       id="dureeVideo"
       #dureeVideo="ngModel"
       required
+      (keyup.enter)="addVideo(videoFormAjout)"
     />
   </mat-slider>
   <div
@@ -139,29 +140,135 @@
     </div>
   </div>
 
-  {{ infosVideo.duree }}
-
   <mat-form-field>
     <mat-label>Sous-titres</mat-label>
     <select
       matNativeControl
-      [(ngModel)]="infosVideo.sousTitres"
-      name="sousTitresVideo"
+      [(ngModel)]="video.sous_titres"
+      name="sous_titresitresVideo"
+      (keyup.enter)="addVideo(videoFormAjout)"
       required
     >
       <option value="aucun">Aucun</option>
       <option value="ss">Sous-titres</option>
-      <option value="cc">Sous-titrage pour sourd et malentendants</option>
+      <option value="cc">Sous-titrage pour sourds et malentendants</option>
     </select>
   </mat-form-field>
-  {{ infosVideo.sousTitres }}
+
+  <mat-form-field>
+    <mat-label>URL de l'image</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder="Quelle est l'URL de l'image de votre vidéo?"
+      [(ngModel)]="video.url_image"
+      name="url_image"
+      (keyup.enter)="addVideo(videoFormAjout)"
+      required
+    />
+  </mat-form-field>
+
+  <!-- <mat-form-field>
+    <mat-label>Score</mat-label>
+    <input
+      matInput
+      type="number"
+      placeholder=""
+      [(ngModel)]="video.score"
+      name="score"
+      (keyup.enter)="addVideo(videoFormAjout)"
+      required
+    />
+  </mat-form-field> -->
+
+  <!-- <mat-form-field>
+    <mat-label>Nombre de vues</mat-label>
+    <input
+      matInput
+      type="number"
+      placeholder=""
+      [(ngModel)]="video.nombre_vues"
+      name="nombre_vues"
+      (keyup.enter)="addVideo(videoFormAjout)"
+      required
+    />
+  </mat-form-field> -->
+
+ <!--  <mat-form-field>
+    <mat-label>Catégories</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder=""
+      [(ngModel)]="video.categories"
+      name="categories"
+      (keyup.enter)="addVideo(videoFormAjout)"
+    />
+  </mat-form-field> -->
+
+  <!-- <mat-form-field>
+    <mat-label>Nom auteur</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder=""
+      [(ngModel)]="video.auteur.nom_auteur"
+      name="nombre_auteur"
+      (keyup.enter)="addVideo(videoFormAjout)"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder=""
+      [(ngModel)]="video.auteur.description_auteur"
+      name="description_auteur"
+      (keyup.enter)="addVideo(videoFormAjout)"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Vérifié</mat-label>
+    <input
+      matInput
+      type="number"
+      placeholder=""
+      [(ngModel)]="video.auteur.verifie"
+      name="verifie"
+      (keyup.enter)="addVideo(videoFormAjout)"
+      required
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Utilisateur</mat-label>
+    <input
+      matInput
+      type="text"
+      placeholder=""
+      [(ngModel)]="video.auteur.utilisateur"
+      name="utilisateur"
+      (keyup.enter)="addVideo(videoFormAjout)"
+      required
+    />
+  </mat-form-field> -->
 
   <button
     mat-raised-button
+    mat-aria-label="Ajouter"
     color="primary"
-    type="submit"
-    [disabled]="!formulaireVideo.form.valid"
+    [disabled]="!videoFormAjout.form.valid"
+    (click)="addVideo(videoFormAjout)"
   >
-    Soumettre
+    Ajouter
+  </button>
+
+  <button mat-button mat-aria-label="Annuler" (click)="annuler()">
+    Annuler
   </button>
 </form>

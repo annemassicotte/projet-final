@@ -1,11 +1,8 @@
+<app-navigation></app-navigation>
 <app-entete [utilisateur]="video[0].auteur"></app-entete>
 <div class="layout-page">
   <app-menu-aside></app-menu-aside>
-  <div>
-    <app-categories></app-categories>
-    <app-formulaire></app-formulaire>
-    <app-liste-petits-videos></app-liste-petits-videos>
-    <app-video-complet [videoComplet]="video[0]"></app-video-complet>
+  <div class="main-content">
+    <router-outlet></router-outlet>
   </div>
 </div>
-<router-outlet></router-outlet>

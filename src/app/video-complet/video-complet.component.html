@@ -4,7 +4,7 @@
     <div class="wrapper-infos-sous-video">
       <h2>{{ videoComplet.nom }}</h2>
       <p>{{ videoComplet.duree | duree }}</p>
-      <div *ngIf="videoComplet.sousTitres == 'ss'; else ccSubtitle">
+      <div *ngIf="videoComplet.sous_titres == 'ss'; else ccSubtitle">
         <mat-icon
           aria-hidden="false"
           aria-label="Subtitles"
@@ -12,7 +12,7 @@
         ></mat-icon>
       </div>
       <ng-template #ccSubtitle>
-        <div *ngIf="videoComplet.sousTitres == 'cc'">
+        <div *ngIf="videoComplet.sous_titres == 'cc'">
           <mat-icon
             aria-hidden="false"
             aria-label="Closed caption"

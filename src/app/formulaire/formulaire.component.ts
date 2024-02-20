@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Video } from '../video';
 /* import { FormGroup, NgModel } from '@angular/forms'; */
 import { TABLEAUCATEGORIES } from '../mock-categories';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
+import { NgForm } from '@angular/forms';
+import { VideoService } from '../video.service';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-formulaire',
@@ -10,8 +13,8 @@ import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
   styleUrls: ['./formulaire.component.css'],
 })
 export class FormulaireComponent {
-  infosVideo: Video = {
-    id: 0,
+  video: Video = {
+    /*  id: 0, */
     nom: '',
     description: '',
     code: '',
@@ -26,16 +29,43 @@ export class FormulaireComponent {
     duree: 0,
     nombre_vues: 0,
     score: 0,
-    sousTitres: '',
-    avis: [],
+    sous_titres: '',
+    /*  avis: [], */
     url_image: '',
   };
 
-  onSubmit() {
-    console.log(this.infosVideo);
+  constructor(
+    private videoService: VideoService,
+    public dialogRef: MatDialogRef<FormulaireComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: Video
+  ) {
+    if (data) {
+      this.video = data;
+    }
   }
 
+  ngOnInit(): void {}
+
+  addVideo(videoFormAjout: NgForm) {
+    if (videoFormAjout.valid) {
+      this.videoService.addVideo(this.video).subscribe((_) => {
+        videoFormAjout.resetForm();
+        this.dialogRef.close('Vidéo ajouté!');
+      });
+    }
+  }
+
+  annuler() {
+    this.dialogRef.close();
+  }
+
+  /* ======================================================================================= */
+
+  /* Date picker */
+
   minDate = new Date();
+
+  /* Autocomplete */
 
   input_categories: string = '';
   listeCompleteCategories: string[] = TABLEAUCATEGORIES;

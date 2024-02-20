@@ -8,6 +8,10 @@ app-entete {
   display: block;
 }
 
+.main-content {
+  margin-top: 4rem;
+}
+
 app-menu-aside {
   margin-top: 4rem;
   background-color: rgb(236, 236, 236);
@@ -19,15 +23,15 @@ app-categories {
   margin-top: 4rem;
 }
 
-app-liste-petits-videos {
+/* app-liste-petits-videos {
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 2rem;
-}
+} */
 
-app-video-complet {
+/* app-video-complet {
   margin-top: 4rem;
   background-color: rgb(236, 236, 236);
   padding-inline: 2rem;
-}
+} */

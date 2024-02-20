@@ -27,6 +27,9 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog';
+
 import {
   MatAutocompleteSelectedEvent,
   MatAutocompleteModule,
@@ -37,6 +40,10 @@ import { VideosPopulairesPipe } from './videos-populaires.pipe';
 import { CategorieFiltreePipe } from './categorie-filtree.pipe';
 
 import {VideoService} from './video.service';
+import { TableVideosComponent } from './table-videos/table-videos.component';
+import { AdministrationComponent } from './administration/administration.component';
+import { AProposComponent } from './apropos/apropos.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +61,10 @@ import {VideoService} from './video.service';
     VuesPipe,
     VideosPopulairesPipe,
     CategorieFiltreePipe,
-
+    TableVideosComponent,
+    AdministrationComponent,
+    AProposComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,6 +84,8 @@ import {VideoService} from './video.service';
     MatButtonModule,
     MatAutocompleteModule,
     MatTooltipModule,
+    MatTableModule,
+    MatDialogModule,
   ],
   providers: [VideoService],
   bootstrap: [AppComponent],

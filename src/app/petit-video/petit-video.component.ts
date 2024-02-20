@@ -23,7 +23,7 @@ export class PetitVideoComponent {
     duree: 0,
     nombre_vues: 0,
     score: 0,
-    sousTitres: '',
+    sous_titres: '',
     avis: [],
     url_image: '',
   };

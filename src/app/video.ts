@@ -2,7 +2,7 @@ import { Auteur } from './auteur';
 import { Avis } from './avis';
 
 export interface Video {
-  id: number;
+  id?: number;
   nom: string;
   description: string;
   code: string;
@@ -12,7 +12,7 @@ export interface Video {
   duree: number;
   nombre_vues: number;
   score: number;
-  sousTitres: string;
-  avis: Avis[];
+  sous_titres: string;
+  avis?: Avis[];
   url_image: string;
 }
