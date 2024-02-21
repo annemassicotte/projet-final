@@ -19,7 +19,7 @@ export class VideoService {
     return this.http.get<Video[]>(this.API_URL);
   }
 
-  getVideoById(id: string): Observable<Video> {
+  getVideoById(id: number): Observable<Video> {
     const url = `${this.API_URL}/?id=${id}`;
     return this.http.get<Video>(url);
   }
@@ -46,7 +46,7 @@ export class VideoService {
     );
   }
 
-  deleteVideo(id: string): Observable<void> {
+  deleteVideo(id: number): Observable<void> {
     return this.http.delete<void>(`${this.API_URL}/?id=${id}`);
   }
 }

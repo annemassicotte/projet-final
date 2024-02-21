@@ -4,7 +4,7 @@ import { ListePetitsVideosComponent } from './liste-petits-videos/liste-petits-v
 import { AProposComponent } from './apropos/apropos.component';
 import { AdministrationComponent } from './administration/administration.component';
 import { VideoCompletComponent } from './video-complet/video-complet.component';
-import { CategoriesComponent } from "./categories/categories.component";
+import { CategoriesComponent } from './categories/categories.component';
 
 const routes: Routes = [
   {
@@ -24,6 +24,7 @@ const routes: Routes = [
     component: CategoriesComponent,
   },
   { path: 'video/:id', component: VideoCompletComponent },
+  { path: 'categories/:categorie', component: CategoriesComponent },
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 <app-navigation></app-navigation>
-<app-entete [utilisateur]="video[0].auteur"></app-entete>
+<app-entete *ngIf="video[0]" [utilisateur]="video[0].auteur"></app-entete>
 <div class="layout-page">
   <app-menu-aside></app-menu-aside>
   <div class="main-content">

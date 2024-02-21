@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Video } from '../video';
-import { VideoService } from "../video.service";
-import { ActivatedRoute } from "@angular/router";
-import { AvisService } from "../avis.service";
+import { VideoService } from '../video.service';
+import { ActivatedRoute } from '@angular/router';
+import { AvisService } from '../avis.service';
 
 @Component({
   selector: 'app-video-complet',
@@ -46,7 +46,7 @@ export class VideoCompletComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.videoService
-        .getVideoById(id)
+        .getVideoById(Number(id))
         .subscribe((resultat) => (this.videoComplet = resultat));
     }
   }

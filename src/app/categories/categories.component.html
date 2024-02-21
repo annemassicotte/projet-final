@@ -1,3 +1,11 @@
 <mat-chip-listbox aria-label="Catégories de vidéos">
-  <mat-chip-option *ngFor="let categorie of tableauCategories">{{categorie}}</mat-chip-option>
+  <mat-chip-option routerLink="/categories/{{categorie}}" *ngFor="let categorie of tableauCategories">{{categorie}}</mat-chip-option>
 </mat-chip-listbox>
+
+
+<div class="liste">
+  <app-petit-video
+    *ngFor="let v of videos | categorieFiltree:categories"
+    [petitVideo]="v"
+  ></app-petit-video>
+</div>

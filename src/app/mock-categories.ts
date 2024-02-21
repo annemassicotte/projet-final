@@ -1,7 +1,6 @@
 export const TABLEAUCATEGORIES: string[] = [
   'Aventure',
   'Cuisine',
-  'Divertissement',
   'Éducation',
   'Historique',
   'Musique',

@@ -51,7 +51,7 @@ export class TableVideosComponent implements OnInit {
     this.openDialog(video);
   } */
 
-  deleteVideo(id: string) {
+  deleteVideo(id: number) {
     this.videoService.deleteVideo(id).subscribe((_) => {
       this.getVideos();
     });
