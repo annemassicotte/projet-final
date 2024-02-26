@@ -8,10 +8,10 @@ import { Avis } from "../avis";
 })
 export class AjoutAvisComponent {
   @Input() avis: Avis = {
+    id: 0,
     fk_video: 0,
     note: 0,
     commentaire: '',
-    id: 0,
   };
 
   onSubmit() {

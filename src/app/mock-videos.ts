@@ -14,7 +14,7 @@ export const TABLEAUVIDEOS: Video[] = [
     duree: 3601,
     nombre_vues: 1,
     score: 5500,
-    sous_titresitres: 'ss',
+    sous_titres: 'ss',
     avis: [
       {
         note: 9,
@@ -45,7 +45,7 @@ export const TABLEAUVIDEOS: Video[] = [
     duree: 603,
     nombre_vues: 7900,
     score: 3000,
-    sous_titresitres: 'ss',
+    sous_titres: 'ss',
     avis: [
       {
         note: 7,
@@ -73,7 +73,7 @@ export const TABLEAUVIDEOS: Video[] = [
     duree: 360,
     nombre_vues: 25000,
     score: 3100,
-    sous_titresitres: 'ss',
+    sous_titres: 'ss',
     avis: [
       {
         note: 8,
@@ -104,7 +104,7 @@ export const TABLEAUVIDEOS: Video[] = [
     duree: 247,
     nombre_vues: 13000,
     score: -5001,
-    sous_titresitres: 'ss',
+    sous_titres: 'ss',
     avis: [
       {
         note: 4,
@@ -132,7 +132,7 @@ export const TABLEAUVIDEOS: Video[] = [
     duree: 180,
     nombre_vues: 90500,
     score: 8600,
-    sous_titresitres: 'ss',
+    sous_titres: 'ss',
     avis: [
       {
         note: 10,
@@ -168,7 +168,7 @@ export const TABLEAUVIDEOS: Video[] = [
     duree: 240,
     nombre_vues: 59400,
     score: 6800,
-    sous_titresitres: 'ss',
+    sous_titres: 'ss',
     avis: [
       {
         note: 10,
@@ -196,7 +196,7 @@ export const TABLEAUVIDEOS: Video[] = [
     duree: 300,
     nombre_vues: 42000,
     score: 4600,
-    sous_titresitres: 'cc',
+    sous_titres: 'cc',
     avis: [
       {
         note: 6,
@@ -224,7 +224,7 @@ export const TABLEAUVIDEOS: Video[] = [
     duree: 425,
     nombre_vues: 72000,
     score: -7000,
-    sous_titresitres: 'cc',
+    sous_titres: 'cc',
     avis: [
       {
         note: 3,

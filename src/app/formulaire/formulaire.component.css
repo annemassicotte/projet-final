@@ -1,10 +1,15 @@
-.formulaire{
-    display: flex;
-    flex-direction: column; 
-    padding: 2rem;
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
 }
 
 .error {
-    color: red;
-    font-size: 0.8rem;
+  color: red;
+  font-size: 0.8rem;
+}
+
+.wrapper-buttons {
+  display: flex;
+  gap: 1rem;
 }

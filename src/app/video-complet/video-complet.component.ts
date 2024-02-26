@@ -31,6 +31,12 @@ export class VideoCompletComponent implements OnInit {
     url_image: '',
   };
 
+  vuesMapping: { [k: string]: string } = {
+    '=0': 'Aucun visionnement',
+    '=1': '1 visionnement',
+    other: '# visionnements',
+  };
+
   constructor(
     private videoService: VideoService,
     private avisService: AvisService,

@@ -16,24 +16,10 @@ export class CategoriesComponent {
 
   constructor(
     private videoService: VideoService,
-
     private route: ActivatedRoute
   ) {
-    /*    if (this.route.snapshot.paramMap.get('categorie') != null) { 
-      this.categories.push( this.route.snapshot.paramMap.get('categorie') as string);
-      console.log(this.categories);
-    } */
-  }
 
-  /* ngOnInit() {
-    this.getVideos();
   }
-
-  getVideos(): void {
-    this.videoService
-      .getVideos()
-      .subscribe((resultat) => (this.videos = resultat));
-  } */
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {

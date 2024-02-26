@@ -1,4 +1,4 @@
-import { Auteur } from './auteur';
+/* import { Auteur } from './auteur';
 
 export const TABLEAUUTILISATEURS: Auteur[] = [
   {
@@ -57,3 +57,4 @@ export const TABLEAUUTILISATEURS: Auteur[] = [
       'Jardinière expérimentée qui aime partager sa passion pour les plantes.',
   },
 ];
+ */

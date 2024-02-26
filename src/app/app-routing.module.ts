@@ -11,20 +11,31 @@ const routes: Routes = [
     path: '',
     component: ListePetitsVideosComponent,
   },
+
   {
     path: 'a-propos',
     component: AProposComponent,
   },
+
   {
     path: 'administration',
     component: AdministrationComponent,
   },
+
   {
     path: 'categories',
     component: CategoriesComponent,
   },
-  { path: 'video/:id', component: VideoCompletComponent },
-  { path: 'categories/:categorie', component: CategoriesComponent },
+
+  {
+    path: 'video/:id',
+    component: VideoCompletComponent,
+  },
+
+  {
+    path: 'categories/:categorie',
+    component: CategoriesComponent,
+  },
 ];
 
 @NgModule({

@@ -29,7 +29,7 @@
     <div class="wrapper-items-description">
       <div class="wrapper-item-description">
         <p>Publiée le {{ videoComplet.date_publication }}</p>
-        <p matTooltip="{{ videoComplet.nombre_vues }}">
+        <p matTooltip="{{ videoComplet.nombre_vues | i18nPlural: vuesMapping }}">
           {{ videoComplet.nombre_vues | vues }}
         </p>
         <p>Score: {{ videoComplet.score }}</p>
